@@ -362,7 +362,9 @@ public class MainFragment extends Fragment {
             tv.setText(Integer.toString(numNbSat)+"/"+Integer.toString(numSat));
             ArrayList<Integer> satList = status.getTrackedSatellites();
             tv = (TextView) myView.findViewById(R.id.main_used_satellites);
-            tv.setText(getCSV(satList));
+
+            // method tv.setText cancelled because of java.util.ConcurrentModificationException in getCSV
+            //tv.setText(getCSV(satList));
        }
         private String lonlat_format(Double lonlat){
             NumberFormat format = NumberFormat.getInstance();
