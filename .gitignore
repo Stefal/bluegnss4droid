@@ -5,3 +5,15 @@ local.properties
 #*.dex
 #*.apk
 #resources.ap_
+/build
+/app/build
+/.gradle
+*.iml
+.gradle
+/local.properties
+/.idea/workspace.xml
+/.idea/libraries
+.idea
+.DS_Store
+/captures
+.externalNativeBuild
