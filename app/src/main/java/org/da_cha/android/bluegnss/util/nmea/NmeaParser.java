@@ -180,7 +180,7 @@ public class NmeaParser {
                 mockProvider.notifyFix(fix);
                 gpsFixNotified = true;
               } else {
-                Log.e(LOG_TAG, "Failed to notify Fix becaues the fix does not have accuracy and/or altitude");
+                Log.e(LOG_TAG, "Failed to notify Fix because the fix does not have accuracy and/or altitude");
               }
             } else {
               if (! mockProvider.isMockStatus(LocationProvider.TEMPORARILY_UNAVAILABLE)){
@@ -202,6 +202,12 @@ public class NmeaParser {
         } else if (command.equals("BDGSA")){
           // Beidou satellites
           parseGSA("BD");
+        } else if (command.equals("GBGSA")){
+          // Beidou satellites
+          parseGSA("GB");
+        } else if (command.equals("GAGSA")){
+            // Galileo satellites
+            parseGSA("GA");
         } else if (command.equals("GPGSV")){
           // GPS satellites in View
           parseGSV("GP");
@@ -214,6 +220,12 @@ public class NmeaParser {
         } else if (command.equals("BDGSV")){
           // Beidou satellites in view
           parseGSV("BD");
+        } else if (command.equals("GBGSV")){
+            // Beidou satellites in view
+            parseGSV("GB");
+        } else if (command.equals("GAGSV")){
+            // Beidou satellites in view
+            parseGSV("GA");
         } else if (command.equals("GPGLL")){
           if (currentNmeaStatus.shouldUseGLL()) {
             // GPS fix
