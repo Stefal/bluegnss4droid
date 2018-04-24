@@ -96,7 +96,7 @@
   <string name="msg_nmea_recording_started">Запись GPS NMEA … запущена</string>
   <string name="msg_nmea_recording_stopped">Запись GPS NMEA … остановлена</string>
   <string name="msg_nmea_recording_already_started">Запись треков GPS … уже запущена</string>
-  <string name="foreground_service_started_notification_title">BlueGps</string>
+  <string name="foreground_service_started_notification_title">BlueGnss</string>
   <string name="foreground_gps_provider_started_notification">Служба BlueGps запущена</string>
   <string name="foreground_nmea_recording_started_notification">Служба записи BlueGps NMEA запущена</string>
   <string name="connection_problem_notification_title">BlueGps: проблема соединения</string>

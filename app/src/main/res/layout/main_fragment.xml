@@ -215,6 +215,7 @@
         android:layout_marginRight="1dip"
         android:text="@string/main_num_satellites" />
     </TableRow>
+    <!--
     <TableRow
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
@@ -236,5 +237,6 @@
         android:layout_marginRight="1dip"
         android:text="@string/main_used_satellites" />
     </TableRow>
+    -->
   </TableLayout>
 </LinearLayout>

@@ -144,9 +144,7 @@
     <string name="about_version">BluetoothGNSS4OSM version</string>
     <string name="about_copyright_1">Copyright 2014, Hiroshi Miura</string>
     <string name="about_copyright_2">Copyright 2014, Bluetooth GNSS for OSM Project</string>
-    <string name="about_app_desc">Bluetooth GNSS for OSM is an application
-      for using an external bluetooth GPS/GNSS on Android devices for OSM Mappers.
-    </string>
+    <string name="about_app_desc">"Bluetooth GNSS for Android is an application\n      for using an external bluetooth GPS/GNSS receiver on Android devices.\n    "</string>
     <string name="about_license">It is free software
       distributed under the terms of the <a href="http://www.gnu.org/licenses/gpl-3.0-standalone.html"><b>GNU General Public License v3</b></a>.
     </string>

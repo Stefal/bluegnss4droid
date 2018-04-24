@@ -99,7 +99,7 @@
     <string name="msg_nmea_recording_started">Enregistrement des traces NMEA… démarré</string>
     <string name="msg_nmea_recording_stopped">Enregistrement des traces NMEA… arrêté</string>
     <string name="msg_nmea_recording_already_started">Enregistrement des traces GPS… déjà démarré</string>
-    <string name="foreground_service_started_notification_title">BlueGps</string>
+    <string name="foreground_service_started_notification_title">BlueGnss</string>
     <string name="foreground_gps_provider_started_notification">GPS Bluetooth démarré.</string>   
     <string name="foreground_nmea_recording_started_notification">Enregistrement des données NMEA en cours.</string>
     <string name="connection_problem_notification_title">BlueGps : problème de connexion</string>
@@ -114,9 +114,7 @@
     <string name="about_version">BluetoothGPS4Droid version</string>
     <string name="about_copyright_1">Copyright (C) 2010-2013 Herbert von Broeuschmeul</string>
     <string name="about_copyright_2">Copyright (C) 2010-2013 BluetoothGPS4Droid Project</string>
-    <string name="about_app_desc">Bluetooth GPS for Android est une application 
-    	qui permet d\'utiliser un GPS bluetooth externe avec un terminal Android.
-    </string>
+    <string name="about_app_desc">"Bluetooth GNSS pour Android est une application \n    \tqui permet d'utiliser un récepteur GNSS bluetooth externe avec un terminal Android.\n    "</string>
     <string name="about_license">Il s\'agit d\'un logiciel libre 
     	distribué gratuitement et régi par la <a href="http://www.gnu.org/licenses/gpl-3.0-standalone.html"><b>Licence publique générale de GNU</b></a>.
     </string>
