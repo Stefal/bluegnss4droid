@@ -47,12 +47,15 @@ Radar Interface: Each satellites have prefix in name
 
 ## License
 
-BlueGNSS4OSM is licensed by GPLv3 and later
+BlueGnss4Droid is licensed by GPLv3 and later
 
 ## Copyright Notices
 
 Copyright 2014 Hiroshi Miura <miurahr@linux.com>
+
 Copyright 2014 Bluetooth GNSS for OSM Mappers Project
+
 Copyright 2010-2013, Herbert von Broeuschmeul
+
 Copyright 2010-2013, BluetoothGPS4Droid Project
 
