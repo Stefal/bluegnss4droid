@@ -19,7 +19,7 @@
 	along with BluetoothGPS4Droid. If not, see : http://www.gnu.org/licenses/.
 -->
 <resources>
-  <string name="app_name">BlueGps</string>
+  <string name="app_name">BlueGnss</string>
   <string name="pref_start_gps_title">Пуск/Стоп GPS</string>
   <string name="pref_start_gps_summary_off">Bluetooth GPS выключен</string>
   <string name="pref_start_gps_summary_on">Bluetooth GPS включен</string>
@@ -99,7 +99,7 @@
   <string name="foreground_service_started_notification_title">BlueGnss</string>
   <string name="foreground_gps_provider_started_notification">Служба BlueGps запущена</string>
   <string name="foreground_nmea_recording_started_notification">Служба записи BlueGps NMEA запущена</string>
-  <string name="connection_problem_notification_title">BlueGps: проблема соединения</string>
+  <string name="connection_problem_notification_title">BlueGnss: проблема соединения</string>
   <plurals name="connection_problem_notification">
     <item quantity="one">Еще одна попытка до закрытия</item>
     <item quantity="other">Будет предпринято еще %d попыток до закрытия</item>
@@ -107,7 +107,7 @@
   <string name="service_closed_because_connection_problem_notification_title">BlueGps остановлен</string>
   <string name="service_closed_because_connection_problem_notification">"Причина: %s"</string>
   <string name="about_title">О программе</string>
-  <string name="about_version">BluetoothGPS4Droid версии</string>
+  <string name="about_version">BluetoothGNSS4Droid версии</string>
   <string name="about_copyright_1">Copyright (C) 2010-2013 Herbert von Broeuschmeul</string>
   <string name="about_copyright_2">Copyright (C) 2010-2013 BluetoothGPS4Droid Project</string>
   <string name="about_app_desc">Bluetooth GPS for Android  - приложение для использования

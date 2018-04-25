@@ -22,7 +22,7 @@
 	Authors: rsantospereira (XDA: rikpereira) and meiji (XDA: meiji.emperor)
 -->
 <resources>
-     <string name="app_name">BlueGps</string>
+     <string name="app_name">BlueGnss</string>
      
     <string name="pref_start_gps_title">Iniciar/Parar GPS</string>
     <string name="pref_start_gps_summary_off">Bluetooth GPS está desativado</string>
@@ -105,7 +105,7 @@
     <string name="foreground_service_started_notification_title">BlueGnss</string>
     <string name="foreground_gps_provider_started_notification">Serviço BlueGps ativo</string>
     <string name="foreground_nmea_recording_started_notification">BlueGps NMEA rastreamento ativo</string>
-    <string name="connection_problem_notification_title">BlueGps: problemas na conexão</string>
+    <string name="connection_problem_notification_title">BlueGnss: problemas na conexão</string>
     <plurals name="connection_problem_notification">
     	<item quantity="one">Nova tentativa antes de fechar</item>
     	<item quantity="other">%d tentativas antes de fechar</item>
@@ -114,7 +114,7 @@
     <string name="service_closed_because_connection_problem_notification">"Motivo: %s"</string>
     
     <string name="about_title">Sobre</string>
-    <string name="about_version">BluetoothGPS4Droid version</string>
+    <string name="about_version">BluetoothGNSS4Droid version</string>
     <string name="about_copyright_1">Copyright (C) 2010-2013 Herbert von Broeuschmeul</string>
     <string name="about_copyright_2">Copyright (C) 2010-2013 BluetoothGPS4Droid Project</string>
     <string name="about_app_desc">Bluetooth GPS para Android é uma aplicação 

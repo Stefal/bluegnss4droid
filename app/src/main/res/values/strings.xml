@@ -141,7 +141,7 @@
     <string name="service_closed_because_connection_problem_notification">"Reason: %s"</string>
 
     <string name="about_title">About</string>
-    <string name="about_version">BluetoothGNSS4OSM version</string>
+    <string name="about_version">BluetoothGNSS4Droid version</string>
     <string name="about_copyright_1">Copyright 2014, Hiroshi Miura</string>
     <string name="about_copyright_2">Copyright 2014, Bluetooth GNSS for OSM Project</string>
     <string name="about_app_desc">"Bluetooth GNSS for Android is an application\n      for using an external bluetooth GPS/GNSS receiver on Android devices.\n    "</string>
