@@ -40,12 +40,14 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
 
+import org.da_cha.android.bluegnss.BuildConfig;
 import org.da_cha.android.bluegnss.GnssProviderService;
 import org.da_cha.android.bluegnss.provider.MockLocationProvider;
 import org.da_cha.android.bluegnss.util.nmea.NmeaParser;
 import org.da_cha.android.bluegnss.util.sirf.SirfUtils;
 import org.da_cha.android.bluegnss.R;
 
+import android.app.AppOpsManager;
 import android.app.Notification;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
@@ -57,6 +59,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.location.GpsStatus.Listener;
 import android.location.GpsStatus.NmeaListener;
+import android.os.Build;
 import android.provider.Settings;
 import android.os.SystemClock;
 import android.util.Log;
@@ -299,7 +302,7 @@ public class BluetoothGnssManager {
           } else if (!bluetoothAdapter.isEnabled()) {
             Log.e(LOG_TAG, "Bluetooth is not enabled");
             disable(R.string.msg_bluetooth_disabled);
-          } else if (Settings.Secure.getInt(callingService.getContentResolver(),Settings.Secure.ALLOW_MOCK_LOCATION, 0)==0){
+          } else if (!isMockLocationEnabled()){
             Log.e(LOG_TAG, "Mock location provider OFF");
             disable(R.string.msg_mock_location_disabled);
           } else {
@@ -694,5 +697,23 @@ public class BluetoothGnssManager {
   public void sendSirfCommand(String payload){
     String command = SirfUtils.createSirfCommandFromPayload(payload);
     sendPackagedSirfCommand(command);
+  }
+
+  public boolean isMockLocationEnabled()
+  {
+    boolean isMockLocation = false;
+    try {
+      //if marshmallow
+      if(android.os.Build.VERSION.SDK_INT >= 23) {
+        AppOpsManager opsManager = (AppOpsManager) appContext.getSystemService(Context.APP_OPS_SERVICE);
+          isMockLocation = (opsManager.checkOp("android:mock_location", android.os.Process.myUid(), BuildConfig.APPLICATION_ID)== AppOpsManager.MODE_ALLOWED);
+      } else {
+        // in marshmallow this will always return true
+        isMockLocation = !android.provider.Settings.Secure.getString(appContext.getContentResolver(), "mock_location").equals("0");
+      }
+    } catch (Exception e) {
+      return isMockLocation;
+    }
+    return isMockLocation;
   }
 }
