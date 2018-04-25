@@ -149,10 +149,10 @@
       distributed under the terms of the <a href="http://www.gnu.org/licenses/gpl-3.0-standalone.html"><b>GNU General Public License v3</b></a>.
     </string>
     <string name="about_sources">The source code is available from Git repository on the project website:
-      https://github.com/miurahr/bluegnss4osm
+      https://github.com/Stefal/bluegnss4droid
     </string>
     <string name="about_original">It was forked from BluetoothGPS4Droid project.
       Acknowleged to original authors.</string>
-    <string name="about_copyright_3">Copyright 2010-2013, Herbert von Broeuschmeul</string>
-    <string name="about_copyright_4">Copyright 2010-2013, BluetoothGPS4Droid Project</string>
+    <string name="about_copyright_3">Copyright 2010–2013, Herbert von Broeuschmeul</string>
+    <string name="about_copyright_4">Copyright 2010–2013, BluetoothGPS4Droid Project</string>
 </resources>
