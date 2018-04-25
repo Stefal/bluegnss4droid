@@ -16,7 +16,7 @@ to your Android device.
 
 ## Download
 
-![Releases are here](/releases)
+![Releases are here](https://github.com/Stefal/bluegnss4droid/releases/latest)
 
 ## Screenshots
 
