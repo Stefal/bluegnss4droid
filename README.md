@@ -14,6 +14,10 @@ Connect external Bluetooth Global Navigation Satellite System (GNSS)
 receivers, using the GPS, GLONASS, Galileo, Beidou or QZSS system,
 to your Android device.
 
+## Download
+
+![Releases are here](/releases)
+
 ## Screenshots
 
 
