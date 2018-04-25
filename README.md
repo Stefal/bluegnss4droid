@@ -1,39 +1,34 @@
-h2. Warning! I don't know what I'm doing!
+## Warning! I don't know what I'm doing!
 
 I'm just trying to build this app with zero knowledge in Java and Android.
 
 
 
 
-h1. Bluetooth GPS/GNSS connector on Android for OpenStreetMap Mappers
+# Bluetooth GPS/GNSS connector on Android for OpenStreetMap Mappers
 
-h2. Description
+## Description
 
 You can use an external GPS/GNSS receiver as same as internal one.
 Connect external Bluetooth Global Navigation Satellite System (GNSS)
 receivers, using the GPS, GLONASS, Galileo, Beidou or QZSS system,
 to your Android device.
 
-h2. Screenshots
+## Screenshots
 
 
 Main Screen
 
-
-
+![Main Screen](/doc/images/Screenshot_main.png)
 
 About
-
-
-
 
 Settings
 
 
+Radar Interface: Each satellites have prefix in name
 
-
-Radar Interface: Each satellites have prefix in name; 
-
+![Main Screen](/doc/images/Screenshot_radar.png)
 - G: GPS
 
 - R: GLONASS
@@ -46,11 +41,11 @@ Radar Interface: Each satellites have prefix in name;
 
 - Q: QZSS
 
-h2. License
+## License
 
 BlueGNSS4OSM is licensed by GPLv3 and later
 
-h2. Copyright Notices
+## Copyright Notices
 
 Copyright 2014 Hiroshi Miura <miurahr@linux.com>
 Copyright 2014 Bluetooth GNSS for OSM Mappers Project
