@@ -83,6 +83,8 @@ public class GnssSatellite {
       this.system = SatelliteSystem.SBS;
     } else if (systemid.equals("BD")){
       this.system = SatelliteSystem.BEIDOU;
+    } else if (systemid.equals("GB")){
+      this.system = SatelliteSystem.BEIDOU;
     } else {
       // unknown satellite
       this.system = SatelliteSystem.UNKNOWN;
@@ -191,7 +193,8 @@ public class GnssSatellite {
         satnum = this.rpn - 192;
         break;
       case BEIDOU:
-        satnum = this.rpn - 200;
+        //satnum = this.rpn - 200;
+        satnum = this.rpn;
         break;
       default:
         satnum = this.rpn;

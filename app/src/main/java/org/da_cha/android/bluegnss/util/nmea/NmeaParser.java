@@ -224,7 +224,7 @@ public class NmeaParser {
             // Beidou satellites in view
             parseGSV("GB");
         } else if (command.equals("GAGSV")){
-            // Beidou satellites in view
+            // Galileo satellites in view
             parseGSV("GA");
         } else if (command.equals("GPGLL")){
           if (currentNmeaStatus.shouldUseGLL()) {
