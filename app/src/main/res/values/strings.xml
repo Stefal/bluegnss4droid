@@ -42,14 +42,14 @@
     <string name="main_num_satellites_title">Sat Tracked/in View</string>
     <string name="main_used_satellites_title">Sat used</string>
 
-    <string name="main_bluetooth_device_name">N.A.</string>
-    <string name="main_date_time">N.A.</string>
-    <string name="main_lon">N.A.</string>
-    <string name="main_lat">N.A.</string>
-    <string name="main_speed">N.A.</string>
-    <string name="main_hdop">N.A.</string>
-    <string name="main_num_satellites">N.A.</string>
-    <string name="main_used_satellites">N.A.</string>
+    <string name="main_bluetooth_device_name" translatable="false">N.A.</string>
+    <string name="main_date_time" translatable="false">N.A.</string>
+    <string name="main_lon" translatable="false">N.A.</string>
+    <string name="main_lat" translatable="false">N.A.</string>
+    <string name="main_speed" translatable="false">N.A.</string>
+    <string name="main_hdop" translatable="false">N.A.</string>
+    <string name="main_num_satellites" translatable="false">N.A.</string>
+    <string name="main_used_satellites" translatable="false">N.A.</string>
 
     <string name="pref_start_gps_title">Start/Stop GPS/GNSS</string>
     <string name="pref_start_gps_summary_off">Bluetooth GPS/GNSS is off</string>
