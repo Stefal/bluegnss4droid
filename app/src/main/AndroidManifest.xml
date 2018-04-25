@@ -54,21 +54,16 @@
     </activity>
     <service android:name="org.da_cha.android.bluegnss.GnssProviderService" android:enabled="true" android:exported="true" >
       <intent-filter>
-        <action android:name="org.da_cha.android.bluegnss.tracker.nmea.intent.action.START_TRACK_RECORDING">
-          <category android:name="android.intent.category.DEFAULT" />
-        </action>
-        <action android:name="org.da_cha.android.bluegnss.tracker.nmea.intent.action.STOP_TRACK_RECORDING">
-          <category android:name="android.intent.category.DEFAULT" />
-        </action>
-        <action android:name="org.da_cha.android.bluegnss.provider.nmea.intent.action.START_GPS_PROVIDER">
-          <category android:name="android.intent.category.DEFAULT" />
-        </action>
-        <action android:name="org.da_cha.android.bluegnss.provider.nmea.intent.action.STOP_GPS_PROVIDER">
-          <category android:name="android.intent.category.DEFAULT" />
-        </action>
-        <action android:name="org.da_cha.android.bluegnss.provider.nmea.intent.action.CONFIGURE_SIRF_GPS">
-          <category android:name="android.intent.category.DEFAULT" />
-        </action>
+        <action android:name="org.da_cha.android.bluegnss.tracker.nmea.intent.action.START_TRACK_RECORDING" />
+        <category android:name="android.intent.category.DEFAULT" />
+        <action android:name="org.da_cha.android.bluegnss.tracker.nmea.intent.action.STOP_TRACK_RECORDING" />
+        <category android:name="android.intent.category.DEFAULT" />
+        <action android:name="org.da_cha.android.bluegnss.provider.nmea.intent.action.START_GPS_PROVIDER" />
+        <category android:name="android.intent.category.DEFAULT" />
+        <action android:name="org.da_cha.android.bluegnss.provider.nmea.intent.action.STOP_GPS_PROVIDER" />
+        <category android:name="android.intent.category.DEFAULT" />
+        <action android:name="org.da_cha.android.bluegnss.provider.nmea.intent.action.CONFIGURE_SIRF_GPS" />
+        <category android:name="android.intent.category.DEFAULT" />
       </intent-filter>
     </service>
   </application>
