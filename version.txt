@@ -1,3 +1,11 @@
+BlueGnss4Droid 2.1.1 (2018-04-24)
+    * Add Glonass, Galileo and Beidou talker ids (Hiroshi Miura)
+    * Add Android 7+ support
+    * Bug fix : Used satellites list removed
+    * Bug fix : Beidou talker id is 'GB', not 'BD'
+    * Add Radar view (Hiroshi Miura)
+    * Add Location informations : Hdop, lat/lon, tracking satellites... (Hiroshi Miura)
+    
 BlueGps4Droid 1.2.6 (2013-03-09)
 	* Bug fix : correction in SiRF options summary description (English/French/Russian/Portugese/Spanish)
 	* Bug fix : correction in NMEA checksum calcul
