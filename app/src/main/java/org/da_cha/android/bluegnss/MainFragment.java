@@ -350,7 +350,7 @@ public class MainFragment extends Fragment {
             double longitude = status.getLongitude();
             tv = (TextView) myView.findViewById(R.id.main_lon);
             tv.setText(lonlat_format(longitude));
-            float speed = status.getSpeed();
+            float speed = (float) (status.getSpeed()*3.6);
             tv = (TextView) myView.findViewById(R.id.main_speed);
             tv.setText(len_format(speed));
             double hdop = status.getHDOP();
