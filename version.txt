@@ -1,3 +1,6 @@
+BlueGnss4Droid 2.1.3 (2018-07-10)
+    * Bug fix : Some Gnss receivers doesn't send VTG sentences, so we should parse speed and bearing in the RMC sentences.
+
 BlueGnss4Droid 2.1.2 (2018-07-10)
     * Bug fix : Send speed and bearing to the android location API
     * Bug fix : The main window now displays the speed in km/h

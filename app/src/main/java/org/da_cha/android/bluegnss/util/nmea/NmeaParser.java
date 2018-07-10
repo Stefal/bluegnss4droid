@@ -492,6 +492,9 @@ public class NmeaParser {
          230394       Date - 23rd of March 1994
          003.1,W      Magnetic Variation
          *6A          The checksum data, always begins with *
+
+      This function parse only speed and bearing as lat/lon are already
+      computed in parseGGA()
     */
         // UTC time of fix HHmmss.S
         String time = splitter.next();
