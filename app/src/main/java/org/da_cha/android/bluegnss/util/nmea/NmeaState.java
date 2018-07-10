@@ -105,6 +105,13 @@ public class NmeaState {
     return true;
   }
 
+    public boolean shouldUseVTG() {
+        if (hasRMC) {
+            return false;
+        }
+        return true;
+    }
+
   public boolean recvRMC(boolean fixed, long time){
     this.hasRMC=true;
     if (this.timestamp != time){

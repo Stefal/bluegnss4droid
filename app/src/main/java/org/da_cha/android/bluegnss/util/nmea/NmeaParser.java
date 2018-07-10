@@ -161,11 +161,16 @@ public class NmeaParser {
                     gnssStatus.clearTrackedSatellites();
                 } else if (command.equals("GPVTG") ||
                         command.equals("GNVTG")) {
-                    parseVTG();
-                    currentGpsStatus = GPS_NOTIFY;
+                    if (currentNmeaStatus.shouldUseVTG()) {
+                        parseVTG();
+                        Log.d(LOG_TAG, "go to parseVTG");
+                        currentGpsStatus = GPS_NOTIFY;
+
+                    }
                 } else if (command.equals("GPRMC") || command.equals("GNRMC")) {
                     if (currentNmeaStatus.shouldUseRMC()) {
                         long updateTime = currentNmeaStatus.getTimestamp();
+                        Log.d(LOG_TAG, "go to parseRMC");
                         if (parseRMC()) {
                             if (!mockProvider.isMockStatus(LocationProvider.AVAILABLE)) {
                                 mockProvider.notifyStatusChanged(LocationProvider.AVAILABLE, null, updateTime);
@@ -187,7 +192,13 @@ public class NmeaParser {
                             }
                             currentGpsStatus = GPS_NOTIFY;
                         }
+                    } else if (!currentNmeaStatus.shouldUseRMC()) {
+                        Log.d(LOG_TAG, "go to parseRMCSpeed");
+                        parseRMCSpeed();
+                        currentGpsStatus = GPS_NOTIFY;
+
                     }
+
                 } else if (command.equals("GPGSA")) {
                     // GPS active satellites
                     parseGSA("GP");
@@ -264,16 +275,18 @@ public class NmeaParser {
                     Log.i(LOG_TAG, "Leica local position and quality message: " + System.currentTimeMillis() + " " + gpsSentence);
                 } else {
                     Log.d(LOG_TAG, "Unkown nmea data: " + System.currentTimeMillis() + " " + gpsSentence);
-                }
+            }
             } catch (Exception e) {
                 // not propergate to caller.
                 Log.d(LOG_TAG, "Caught exception on NmeaParser");
-            }
-        } else {
+        }
+        } else
+
+        {
             // no returns the mismatched data.
             Log.d(LOG_TAG, "Mismatched data: " + System.currentTimeMillis() + " " + gpsSentence);
             return null;
-        }
+    }
         // gpsSentence == nmeaSentence+"/r/n"
         // should return with "/r/n"
         return gpsSentence;
@@ -443,6 +456,7 @@ public class NmeaParser {
         if (status != null && !status.equals("") && status.equals("A")) {
             gnssStatus.setFixTimestamp(timestamp);
             currentNmeaStatus.recvRMC(true, timestamp);
+            Log.d(LOG_TAG, "recRMC = True");
             if (lat != null && !lat.equals("")) {
                 gnssStatus.setLatitude(parserUtil.parseNmeaLatitude(lat, latDir));
             }
@@ -458,7 +472,69 @@ public class NmeaParser {
             return true;
         } else if (status.equals("V")) {
             currentNmeaStatus.recvRMC(false, timestamp);
+            Log.d(LOG_TAG, "recvRMC = False");
             return false;
+        }
+        return false;
+    }
+
+    private boolean parseRMCSpeed() {
+    /* $GPRMC,123519,A,4807.038,N,01131.000,E,022.4,084.4,230394,003.1,W*6A
+
+       Where:
+         RMC          Recommended Minimum sentence C
+         123519       Fix taken at 12:35:19 UTC
+         A            Status A=active or V=Void.
+         4807.038,N   Latitude 48 deg 07.038' N
+         01131.000,E  Longitude 11 deg 31.000' E
+         022.4        Speed over the ground in knots
+         084.4        Track angle in degrees True
+         230394       Date - 23rd of March 1994
+         003.1,W      Magnetic Variation
+         *6A          The checksum data, always begins with *
+    */
+        // UTC time of fix HHmmss.S
+        String time = splitter.next();
+        // fix status (A/V)
+        String status = splitter.next();
+        // latitude ddmm.M
+        String lat = splitter.next();
+        // direction (N/S)
+        String latDir = splitter.next();
+        // longitude dddmm.M
+        String lon = splitter.next();
+        // direction (E/W)
+        String lonDir = splitter.next();
+        // Speed over the ground in knots
+        String speed = splitter.next();
+        // Track angle in degrees True
+        String bearing = splitter.next();
+        // UTC date of fix DDMMYY
+        String date = splitter.next();
+        // Magnetic Variation ddd.D
+        String magn = splitter.next();
+        // Magnetic variation direction (E/W)
+        String magnDir = splitter.next();
+        // for NMEA 0183 version 3.00 active the Mode indicator field is added
+        // Mode indicator, (A=autonomous, D=differential, E=Estimated, N=not valid, S=Simulator )
+        gnssStatus.setMode(status);
+        //long timestamp = parserUtil.parseNmeaTime(time);
+        if (status != null && !status.equals("") && status.equals("A")) {
+            //gnssStatus.setFixTimestamp(timestamp);
+            //currentNmeaStatus.recvRMC(true, timestamp);
+            //if (lat != null && !lat.equals("")) {
+            //    gnssStatus.setLatitude(parserUtil.parseNmeaLatitude(lat, latDir));
+            //}
+            //if (lon != null && !lon.equals("")) {
+            //    gnssStatus.setLongitude(parserUtil.parseNmeaLongitude(lon, lonDir));
+            //}
+            if (speed != null && !speed.equals("")) {
+                gnssStatus.setSpeed(parserUtil.parseNmeaSpeed(speed, "N"));
+            }
+            if (bearing != null && !bearing.equals("")) {
+                gnssStatus.setBearing(parserUtil.parseNmeaFloat(bearing));
+            }
+            return true;
         }
         return false;
     }
