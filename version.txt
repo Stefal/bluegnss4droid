@@ -1,3 +1,7 @@
+BlueGnss4Droid 2.1.2 (2018-07-10)
+    * Bug fix : Send speed and bearing to the android location API
+    * Bug fix : The main window now displays the speed in km/h
+    
 BlueGnss4Droid 2.1.1 (2018-04-24)
     * Add Glonass, Galileo and Beidou talker ids (Hiroshi Miura)
     * Add Android 7+ support
