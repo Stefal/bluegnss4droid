@@ -37,6 +37,7 @@
     <string name="main_date_time_title">Date/Time</string>
     <string name="main_lon_title">Longitude</string>
     <string name="main_lat_title">Latitude</string>
+    <string name="main_quality_title">Status</string>
     <string name="main_speed_title">Speed</string>
     <string name="main_hdop_title">HDOP</string>
     <string name="main_num_satellites_title">Sat Tracked/in View</string>
@@ -46,6 +47,7 @@
     <string name="main_date_time" translatable="false">N.A.</string>
     <string name="main_lon" translatable="false">N.A.</string>
     <string name="main_lat" translatable="false">N.A.</string>
+    <string name="main_quality" translatable="false">N.A.</string>
     <string name="main_speed" translatable="false">N.A.</string>
     <string name="main_hdop" translatable="false">N.A.</string>
     <string name="main_num_satellites" translatable="false">N.A.</string>
