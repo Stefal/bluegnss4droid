@@ -373,7 +373,7 @@ public class MainFragment extends Fragment {
        }
         private String lonlat_format(Double lonlat){
             NumberFormat format = NumberFormat.getInstance();
-            format.setMaximumFractionDigits(6);
+            format.setMaximumFractionDigits(8);
             return format.format(lonlat);
         }
         private String len_format(Double len){
