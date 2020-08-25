@@ -21,14 +21,14 @@ to your Android device.
 
 ## Download
 
-![Releases are here](https://github.com/Stefal/bluegnss4droid/releases/latest)
+![Releases are here](https://github.com/rinex20/bluegnss4droid/releases/tag/rtk)
 
 ## Screenshots
 
 
 Main Screen
 
-![Main Screen](/doc/images/Screenshot_main.png)
+![Main Screen](/doc/images/Screenshot_main_rtk.png)
 
 About
 
