@@ -1,3 +1,8 @@
+## new feature
+ - increase precision of lat/lon
+ - add TTS support
+ - add some new field for rtk position
+
 ## Warning! I don't know what I'm doing!
 
 I'm just trying to build this app with zero knowledge in Java and Android.
