@@ -2,6 +2,7 @@
  - increase precision of lat/lon
  - add TTS support
  - add some new field for rtk position
+ - update BDS satellite sv no
 
 ## Warning! I don't know what I'm doing!
 
