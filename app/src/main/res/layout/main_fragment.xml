@@ -151,6 +151,29 @@
         android:layout_marginRight="1dip"
         android:text="@string/main_lat" />
     </TableRow>
+	  
+    <TableRow
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="5dip" >
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="@dimen/main_status_height"
+          android:textSize="@dimen/main_status_font_size"
+          android:layout_marginLeft="1dip"
+          android:layout_marginRight="1dip"
+          android:text="@string/main_quality_title" />
+      <TextView
+          android:id="@+id/main_quality"
+          android:layout_width="wrap_content"
+          android:layout_height="@dimen/main_status_height"
+          android:textSize="@dimen/main_status_font_size"
+          android:layout_centerInParent="true"
+          android:layout_gravity="center"
+          android:layout_marginLeft="1dip"
+          android:layout_marginRight="1dip"
+          android:text="@string/main_quality" />
+    </TableRow>	  
     <TableRow
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"

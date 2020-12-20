@@ -1,3 +1,9 @@
+## new feature
+ - increase precision of lat/lon
+ - add TTS support
+ - add some new field for rtk position
+ - update BDS satellite sv no
+
 ## Warning! I don't know what I'm doing!
 
 I'm just trying to build this app with zero knowledge in Java and Android.
@@ -16,14 +22,14 @@ to your Android device.
 
 ## Download
 
-![Releases are here](https://github.com/Stefal/bluegnss4droid/releases/latest)
+![Releases are here](https://github.com/rinex20/bluegnss4droid/releases/tag/rtk)
 
 ## Screenshots
 
 
 Main Screen
 
-![Main Screen](/doc/images/Screenshot_main.png)
+![Main Screen](/doc/images/Screenshot_main_rtk.png)
 
 About
 

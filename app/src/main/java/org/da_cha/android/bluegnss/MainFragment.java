@@ -65,6 +65,8 @@ public class MainFragment extends Fragment {
     private final GnssUpdateReceiver mGnssUpdateReceiver = new GnssUpdateReceiver();
 
     private View myView;
+    
+    private final static String FixQuality[] = {"NA","GNSS Fix","DGPS","NA","RTK Fixed","RTK Float"};
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState){
@@ -350,6 +352,10 @@ public class MainFragment extends Fragment {
             double longitude = status.getLongitude();
             tv = (TextView) myView.findViewById(R.id.main_lon);
             tv.setText(lonlat_format(longitude));
+            //fix quality
+            int quality = status.getQuality();
+            tv = (TextView) myView.findViewById(R.id.main_quality);
+            tv.setText(FixQuality[quality]);
             float speed = (float) (status.getSpeed()*3.6);
             tv = (TextView) myView.findViewById(R.id.main_speed);
             tv.setText(len_format(speed));
@@ -367,7 +373,7 @@ public class MainFragment extends Fragment {
        }
         private String lonlat_format(Double lonlat){
             NumberFormat format = NumberFormat.getInstance();
-            format.setMaximumFractionDigits(6);
+            format.setMaximumFractionDigits(8);
             return format.format(lonlat);
         }
         private String len_format(Double len){
